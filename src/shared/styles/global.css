@@ -1,0 +1,57 @@
+.card-text {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.card-img-top {
+  height: 180px;
+  object-fit: cover;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f8f9fa;
+}
+
+.navbar .nav-link:hover {
+  opacity: 0.8;
+}
+
+.badge-genre {
+  background-color: #ff7a18;
+  color: white;
+}
+
+.category-btn {
+  border-color: #ff7a18;
+  color: #ff7a18;
+  font-weight: 500;
+}
+
+.category-btn:hover {
+  background-color: #ff7a18;
+  color: white;
+}
+
+.category-btn-active {
+  background-color: #ff7a18;
+  border-color: #ff7a18;
+  color: white;
+}
+
+.btn-orange-outline {
+  border-color: #ff7a18;
+  color: #ff7a18;
+}
+
+.btn-orange-outline:hover:not(:disabled) {
+  background-color: #ff7a18;
+  color: white;
+}
+
+.btn-orange-outline:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

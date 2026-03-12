@@ -1,3 +1,12 @@
+# TEMAS CLAVE
+
+Este proyecto fue realizado con React, TypeScript, Bootstrap, Zustand y React-router, 
+realizado por:
+
+KEVIN FELIPE CARRILLO ROMERO
+ALLAN SAMIR BARRETO ARTUNDUAGA
+
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

@@ -6,6 +6,54 @@ realizado por:
 KEVIN FELIPE CARRILLO ROMERO
 ALLAN SAMIR BARRETO ARTUNDUAGA
 
+## Sistema de Autenticación
+
+La aplicación incluye un sistema completo de autenticación con las siguientes características:
+
+### Funcionalidades
+
+- **Registro de usuarios**: Creación de nuevas cuentas con encriptamiento de contraseñas
+- **Inicio de sesión**: Validación de credenciales con encriptamiento
+- **Perfil de usuario**: Vista protegida con información del usuario autenticado
+- **Rutas protegidas**: Sistema de protección de rutas basado en autenticación
+- **Estado persistente**: Sesión persistente usando Zustand con localStorage
+
+### Componentes
+
+- `Login.tsx`: Formulario de inicio de sesión
+- `Register.tsx`: Formulario de registro de usuarios
+- `UserProfile.tsx`: Página de perfil de usuario protegida
+- `ProtectedRoute.tsx`: Componente de protección de rutas
+
+### Encriptamiento
+
+- Utiliza un método básico de encriptamiento para demostración
+- Las contraseñas se encriptan antes de almacenarlas
+- Validación segura durante el inicio de sesión
+
+### Flujo de Usuario
+
+1. **Registro**: Usuario se registra en `/register`
+2. **Login**: Inicia sesión en `/login`
+3. **Acceso**: Redirección automática a `/profile`
+4. **Navegación**: Navbar muestra información del usuario
+5. **Logout**: Cierre de sesión desde Navbar o perfil
+
+### Rutas
+
+- `/login` - Página de inicio de sesión
+- `/register` - Página de registro
+- `/profile` - Perfil de usuario (protegido)
+
+### Estado de Autenticación
+
+El estado se maneja con Zustand y persiste en localStorage:
+- `isAuthenticated`: Estado de autenticación
+- `user`: Información del usuario
+- `token`: Token de sesión
+- `usersRegistered`: Lista de usuarios registrados
+
+---
 
 # React + TypeScript + Vite
 

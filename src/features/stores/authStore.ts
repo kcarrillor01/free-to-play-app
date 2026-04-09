@@ -21,13 +21,7 @@ export const useAuthStore = create<AuthState>()(persist((set) => ({
   setToken: (token: string | null) => set({ token }),
   user: null as User | null,
   setUser: (user: User | null) => set({ user }),
-  usersRegistered: [
-    {
-      name: 'Admin',
-      email: 'admin@pixelarena.com',
-      password: 'admin123'
-    }
-  ] as RegisterData[],
+  usersRegistered: [] as RegisterData[],
   setUsersRegistered: (users: RegisterData[]) => set({ usersRegistered: users }),
 }), {
   name: 'auth-storage',

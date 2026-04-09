@@ -1,5 +1,6 @@
 import React from "react";
 import { useGamesStore } from "../../features/games/stores/gamesStore";
+import { useAuthStore } from "../../features/stores/authStore";
 import { Link } from "react-router";
 
 const Navbar: React.FC = () => {
@@ -9,6 +10,15 @@ const Navbar: React.FC = () => {
   const setSearch = useGamesStore((s) => s.setSearch);
 
   const totalGames = useGamesStore((s) => s.filteredGames.length);
+
+  // Auth state
+  const { isAuthenticated, user, setIsAuthenticated, setUser, setToken } = useAuthStore();
+
+  const handleLogout = () => {
+    setIsAuthenticated(false);
+    setUser(null);
+    setToken(null);
+  };
 
   return (
     <nav
@@ -80,6 +90,31 @@ const Navbar: React.FC = () => {
             <span className="badge bg-dark">
               {totalGames} juegos
             </span>
+
+            {/* Auth buttons */}
+            {isAuthenticated && user ? (
+              <div className="d-flex align-items-center gap-2">
+                <Link
+                  to="/profile"
+                  className="btn btn-light btn-sm fw-semibold text-decoration-none"
+                >
+                  {user.name}
+                </Link>
+                <button
+                  onClick={handleLogout}
+                  className="btn btn-outline-light btn-sm fw-semibold"
+                >
+                  Cerrar Sesión
+                </button>
+              </div>
+            ) : (
+              <Link
+                to="/login"
+                className="btn btn-light btn-sm fw-semibold text-decoration-none"
+              >
+                Iniciar Sesión
+              </Link>
+            )}
 
           </div>
 
